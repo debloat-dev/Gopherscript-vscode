@@ -1,0 +1,25 @@
+{
+    "name": "gopherscript",
+    "displayName": "gopherscript",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.65.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "gopherscript",
+            "aliases": ["Gopherscript", "gopherscript"],
+            "extensions": [".gos"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "gopherscript",
+            "scopeName": "source.gopherscript",
+            "path": "./syntaxes/gopherscript.tmLanguage.json"
+        }]
+    }
+}
