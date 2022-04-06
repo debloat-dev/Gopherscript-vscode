@@ -245,6 +245,22 @@
 					}
 				},
 				{
+					"begin": "\\b([a-zA-Z][a-zA-Z0-9_-]*)(?=\")",
+					"beginCaptures": {
+						"1": {
+							"name": "entity.name.type"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#strings"
+						}
+					],
+					"end": "(?<=\")",
+					"endCaptures": {
+					}
+				},
+				{
 					"begin": "^[ \t]*([a-zA-Z0-9_-]+ [ \t]*)",
 					"beginCaptures": {
 						"1": {
