@@ -151,7 +151,7 @@
 				},
 				{
 					"name": "keyword.control.gopherscript",
-					"match": "\\b(if|switch|match|for|in|return)\\b"
+					"match": "\\b(if|else|switch|match|for|in|return)\\b"
 				},
 				{
 					"name": "storage.type",
