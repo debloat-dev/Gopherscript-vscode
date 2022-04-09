@@ -1,0 +1,24 @@
+{
+
+	"forin": {
+		"scope": "gopherscript",
+		"prefix": "forin",
+		"body": [
+			"for $$1, $$2 in $3 {",
+			"\t$0$4",
+			"}"
+		],
+		"description": "for .. in loop"
+	},
+	"min-require": {
+		"scope": "gopherscript",
+		"prefix": "minreq",
+		"body": [
+			"require {",
+                "\tuse: {globals: \"*\"}",
+                "\t$0",
+            "}"
+		],
+		"description": "minimal require"
+	}
+}

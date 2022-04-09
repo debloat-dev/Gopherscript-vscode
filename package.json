@@ -20,6 +20,12 @@
             "language": "gopherscript",
             "scopeName": "source.gopherscript",
             "path": "./syntaxes/gopherscript.tmLanguage.json"
-        }]
+        }],
+        "snippets": [
+            {
+                "language": "gopherscript",
+                "path": "./snippets.json"
+            }
+        ]
     }
 }
