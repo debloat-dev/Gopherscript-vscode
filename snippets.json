@@ -10,9 +10,40 @@
 		],
 		"description": "for .. in loop"
 	},
+    "for10": {
+		"scope": "gopherscript",
+		"prefix": "for10",
+		"body": [
+			"for (1 .. 10) {",
+			"\t$1",
+			"}"
+		],
+		"description": "for (1.. 10) loop"
+	},
+    "1_10": {
+		"scope": "gopherscript",
+		"prefix": "1_10",
+		"body": [
+			"(1 .. 10)"
+		]
+	},
+    "1_n": {
+		"scope": "gopherscript",
+		"prefix": "1_n",
+		"body": [
+			"(1 .. \\$n)"
+		]
+	},
+    "0_n": {
+		"scope": "gopherscript",
+		"prefix": "0_n",
+		"body": [
+			"(0 .. \\$n)"
+		]
+	},
 	"min-require": {
 		"scope": "gopherscript",
-		"prefix": "minreq",
+		"prefix": "req",
 		"body": [
 			"require {",
                 "\tuse: {globals: \"*\"}",
@@ -20,5 +51,40 @@
             "}"
 		],
 		"description": "minimal require"
-	}
+	},
+    "switch": {
+		"scope": "gopherscript",
+		"prefix": "switch",
+		"body": [
+			"switch $1 {",
+                "\t$2 {",
+                "\t\t$3",
+                "\t}",
+            "}"
+		],
+		"description": "minimal switch statement"
+	},
+    "match": {
+		"scope": "gopherscript",
+		"prefix": "match",
+		"body": [
+			"match $1 {",
+                "\t$2 {",
+                "\t\t$3",
+                "\t}",
+            "}"
+		],
+		"description": "minimal match statement"
+	},
+    "import": {
+        "scope": "gopherscript",
+        "prefix": "import",
+        "body": [
+            "import res$1 https://$2.gos \"sha256$3\" {",
+            "\t$4",
+            "} allow {",
+            "\t$5",
+            "}"
+        ]
+    }
 }
