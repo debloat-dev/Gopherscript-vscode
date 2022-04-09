@@ -20,6 +20,24 @@
 		],
 		"description": "for (1.. 10) loop"
 	},
+    "for0n": {
+		"scope": "gopherscript",
+		"prefix": "for0n",
+		"body": [
+			"for (0 .. \\$n) {",
+			"\t$1",
+			"}"
+		]
+	},
+    "for1n": {
+		"scope": "gopherscript",
+		"prefix": "for1n",
+		"body": [
+			"for (1 .. $$n) {",
+			"\t$1",
+			"}"
+		]
+	},
     "1_10": {
 		"scope": "gopherscript",
 		"prefix": "1_10",
