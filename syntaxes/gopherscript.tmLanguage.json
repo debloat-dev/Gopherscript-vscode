@@ -3,6 +3,9 @@
 	"name": "Gopherscript",
 	"patterns": [
 		{
+			"include": "#url-patterns"
+		},
+		{
 			"include": "#urls"
 		},
 		{
@@ -19,9 +22,6 @@
 		},
 		{
 			"include": "#http-host-patterns"
-		},
-		{
-			"include": "#url-patterns"
 		},
 		{
 			"include": "#path-patterns"
