@@ -6,6 +6,9 @@
 			"include": "#url-patterns"
 		},
 		{
+			"include": "#function-calls"
+		},
+		{
 			"include": "#urls"
 		},
 		{
@@ -34,9 +37,6 @@
 		},
 		{
 			"include": "#strings"
-		},
-		{
-			"include": "#function-calls"
 		},
 		{
 			"include": "#identifiers"
@@ -303,6 +303,20 @@
 					],
 					"end": "(?<=\")",
 					"endCaptures": {}
+				},
+				{
+					"begin": "\\b([a-zA-Z][a-zA-Z0-9_-]*\\$)",
+					"beginCaptures": {
+						"1": {
+							"name": "entity.name.function"
+						}
+					},
+					"patterns": [
+						{
+							"include": "$self"
+						}
+					],
+					"end": "\n"
 				},
 				{
 					"begin": "^[ \t]*([a-zA-Z_][a-zA-Z0-9_-]* [ \t]*)",
