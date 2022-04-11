@@ -3,6 +3,9 @@
 	"name": "Gopherscript",
 	"patterns": [
 		{
+			"include": "#urls"
+		},
+		{
 			"include": "#variables"
 		},
 		{
@@ -19,9 +22,6 @@
 		},
 		{
 			"include": "#url-patterns"
-		},
-		{
-			"include": "#urls"
 		},
 		{
 			"include": "#path-patterns"
@@ -131,7 +131,26 @@
 		"urls": {
 			"patterns": [
 				{
-					"name": "string.unquoted",
+					"name": "string.interpolated.url-expression",
+					"begin": "https://(?:localhost|(?:www\\.)?[-a-zA-Z0-9@:%._+~#=]{1,32}\\.[a-zA-Z0-9()]{1,6})(?=[-a-zA-Z0-9@:%_+.~#?&//=]*\\$)",
+					"patterns": [
+						{
+							"match": "\\$[a-zA-Z0-9_-]+\\$",
+							"captures": {
+								"0": {
+									"name": "variable.name"
+								}
+							}
+						},
+						{
+							"match": "[-a-zA-Z0-9@:%_+.~#?&//=]+",
+							"name": "string.unquoted.string-slice"
+						}
+					],
+					"end": "(?=[\\s})\\],:;])"
+				},
+				{
+					"name": "string.unquoted.url",
 					"match": "https://(?:localhost|(?:www\\.)?[-a-zA-Z0-9@:%._+~#=]{1,32}\\.[a-zA-Z0-9()]{1,6})\\b(?:[-a-zA-Z0-9@:%_+.~#?&//=]{0,100})"
 				}
 			]
