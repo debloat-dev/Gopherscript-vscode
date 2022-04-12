@@ -1,17 +1,20 @@
-# gopherscript README
+# Gopherscript extension
 
-This is the README for your extension "gopherscript". After writing up a brief description, we recommend including the following sections.
+This extension provides support for the Gopherscript programming language.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### Syntax highligthing
 
-For example if there is an image subfolder under your extension project workspace:
+![image](https://user-images.githubusercontent.com/84961291/162973968-ced68cec-f34c-48b9-aa07-aea9530e3502.png)
 
-\!\[feature X\]\(images/feature-x.png\)
+### Snippets
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Convenient snippets for ``require``, ``for..in``, ``import``, ``sr`` and more !
 
+![image](https://user-images.githubusercontent.com/84961291/162973069-dd2db831-110f-4855-98d5-ba9a16e6005d.png)
+
+![image](https://user-images.githubusercontent.com/84961291/162973094-9ad12f76-a13b-46d8-91d6-5deb8ce4b9e2.png)
 
 <!--
 ## Extension Settings
