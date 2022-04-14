@@ -6,6 +6,9 @@
 			"include": "#url-patterns"
 		},
 		{
+			"include": "#keywords"
+		},
+		{
 			"include": "#function-calls"
 		},
 		{
@@ -31,9 +34,6 @@
 		},
 		{
 			"include": "#paths"
-		},
-		{
-			"include": "#keywords"
 		},
 		{
 			"include": "#strings"
