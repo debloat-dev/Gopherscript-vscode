@@ -324,6 +324,10 @@
 						"1": {
 							"patterns": [
 								{
+									"match": "^ex\\b",
+									"name": "constant.language"
+								},
+								{
 									"include": "#keywords"
 								},
 								{
