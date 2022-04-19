@@ -6,6 +6,7 @@
     "engines": {
         "vscode": "^1.61.0"
     },
+    "publisher": "xbsd",
     "categories": [
         "Programming Languages"
     ],
