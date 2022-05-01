@@ -4,7 +4,7 @@
 		"scope": "gopherscript",
 		"prefix": "forin",
 		"body": [
-			"for $$1, $$2 in $3 {",
+			"for $1, $2 in $3 {",
 			"\t$0$4",
 			"}"
 		],
