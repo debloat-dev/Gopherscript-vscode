@@ -358,15 +358,7 @@
 							]
 						},
 						"2": {
-							"name": "entity.name.function",
-							"patterns": [
-								{
-									"include": "#keywords"
-								},
-								{
-									"include": "#identifiers"
-								}
-							]
+							"name": "entity.name.function"
 						}
 					},
 					"patterns": [
