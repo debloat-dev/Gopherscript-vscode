@@ -53,11 +53,11 @@
 			"patterns": [
 				{
 					"name": "variable.name",
-					"match": "[$][a-zA-Z]*\\b"
+					"match": "[$][a-zA-Z-]*\\b"
 				},
 				{
 					"name": "variable.name.global",
-					"match": "[$][$][a-zA-Z]*\\b"
+					"match": "[$][$][a-zA-Z-]*\\b"
 				}
 			]
 		},
@@ -175,7 +175,7 @@
 			"patterns": [
 				{
 					"name": "string.unquoted",
-					"match": "\\.{0,2}/[-a-zA-Z0-9_+/.]*"
+					"match": "\\.{0,2}/[-a-zA-Z0-9_+@/.]*"
 				}
 			]
 		},
