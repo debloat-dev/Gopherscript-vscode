@@ -2,7 +2,7 @@
     "name": "gopherscript",
     "displayName": "gopherscript",
     "description": "",
-    "version": "0.0.3",
+    "version": "0.0.5",
     "engines": {
         "vscode": "^1.61.0"
     },
