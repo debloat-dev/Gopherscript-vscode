@@ -183,7 +183,7 @@
 			"patterns": [
 				{
 					"name": "keyword.other",
-					"match": "\\b(require|import|allow|as|const|assign)\\b"
+					"match": "\\b(require|drop-perms|import|allow|as|const|assign)\\b"
 				},
 				{
 					"name": "keyword.control.gopherscript",
