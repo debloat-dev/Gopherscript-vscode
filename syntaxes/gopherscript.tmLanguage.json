@@ -39,6 +39,9 @@
 			"include": "#strings"
 		},
 		{
+			"include": "#runes"
+		},
+		{
 			"include": "#complex-patterns"
 		},
 		{
@@ -246,6 +249,35 @@
 				{
 					"match": "\\\\.",
 					"name": "invalid.illegal.unrecognized-string-escape.gopherscript"
+				}
+			]
+		},
+		"runes": {
+			"patterns": [
+				{
+					"begin": "'",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.begin"
+						}
+					},
+					"end": "'",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.string.end"
+						}
+					},
+					"name": "string.quoted.rune",
+					"patterns": [
+						{
+							"match": "\\G(\\\\([0-7]{3}|[abfnrtv\\\\'\"])|.)(?=')",
+							"name": "constant.other.rune.go"
+						},
+						{
+							"match": "[^']+",
+							"name": "invalid.illegal.unknown-rune"
+						}
+					]
 				}
 			]
 		},
