@@ -165,6 +165,25 @@
 			"patterns": [
 				{
 					"name": "string.regexp.path-pattern",
+					"begin": "%\\.{0,2}/[-a-zA-Z0-9_+@/.]*(?=\\$)",
+					"patterns": [
+						{
+							"match": "\\$[a-zA-Z0-9_-]+\\$",
+							"captures": {
+								"0": {
+									"name": "variable.name"
+								}
+							}
+						},
+						{
+							"match": "[-a-zA-Z0-9_+@/.]+",
+							"name": "string.regexp.path-pattern-slice"
+						}
+					],
+					"end": "(?=[\\s})\\],:;])"
+				},
+				{
+					"name": "string.regexp.path-pattern",
 					"match": "\\.{0,2}/([*?][-a-zA-Z0-9_+/:.]*|\\[[-a-zA-Z0-9_+/:.*?]+\\])([-a-zA-Z0-9_+/:.*?]+|\\[[-a-zA-Z0-9_+/:.*?]+\\])*"
 				},
 				{
@@ -174,6 +193,10 @@
 				{
 					"name": "string.regexp.path-pattern",
 					"match": "\\.{0,2}/([.]{3}|[-a-zA-Z0-9_+/.]*/[.]{3})"
+				},
+				{
+					"name": "string.regexp.path-pattern",
+					"match": "%\\.{0,2}/[-a-zA-Z0-9_+/.]*"
 				}
 			]
 		},
