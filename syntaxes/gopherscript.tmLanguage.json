@@ -39,12 +39,6 @@
 			"include": "#regex"
 		},
 		{
-			"include": "#regexp"
-		},
-		{
-			"include": "#regex-character-class"
-		},
-		{
 			"include": "#strings"
 		},
 		{
