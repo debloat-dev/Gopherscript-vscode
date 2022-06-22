@@ -1,32 +1,49 @@
 {
-    "name": "gopherscript",
-    "displayName": "gopherscript",
-    "description": "",
+	"name": "gopherscript",
+	"displayName": "gopherscript",
+	"description": "",
 	"version": "0.0.7",
-    "engines": {
-        "vscode": "^1.61.0"
-    },
-    "publisher": "xbsd",
-    "categories": [
-        "Programming Languages"
-    ],
-    "contributes": {
-        "languages": [{
-            "id": "gopherscript",
-            "aliases": ["Gopherscript", "gopherscript"],
-            "extensions": [".gos"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "gopherscript",
-            "scopeName": "source.gopherscript",
-            "path": "./syntaxes/gopherscript.tmLanguage.json"
-        }],
-        "snippets": [
-            {
-                "language": "gopherscript",
-                "path": "./snippets.json"
-            }
-        ]
-    }
+	"engines": {
+		"vscode": "^1.61.0"
+	},
+	"publisher": "xbsd",
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "gopherscript",
+				"aliases": [
+					"Gopherscript",
+					"gopherscript"
+				],
+				"extensions": [
+					".gos"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "gopherscript",
+				"scopeName": "source.gopherscript",
+				"path": "./syntaxes/gopherscript.tmLanguage.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "gopherscript",
+				"path": "./snippets.json"
+			}
+		]
+	},
+	"__metadata": {
+		"installedTimestamp": 1651937945769,
+		"id": "85fcd5c4-4eed-497f-b215-8974b424edb2",
+		"publisherId": "19c9c249-a1cd-47af-8792-1c79057b7e55",
+		"publisherDisplayName": "xbsd",
+		"isPreReleaseVersion": false,
+		"preRelease": false
+	}
 }
