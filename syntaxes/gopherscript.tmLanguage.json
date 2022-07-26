@@ -27,7 +27,7 @@
 			"include": "#comments"
 		},
 		{
-			"include": "#http-host-patterns"
+			"include": "#host-patterns"
 		},
 		{
 			"include": "#path-patterns"
@@ -108,15 +108,15 @@
 				}
 			]
 		},
-		"http-host-patterns": {
+		"host-patterns": {
 			"patterns": [
 				{
 					"name": "string.regexp",
-					"match": "https?:\\/\\/\\*(\\.[-a-zA-Z0-9.*]*)?(:[0-9]{1,4})?"
+					"match": "[a-zA-Z][-a-zA-Z0-9+.]*:\\/\\/\\*(\\.[-a-zA-Z0-9.*]*)?(:[0-9]{1,4})?"
 				},
 				{
 					"name": "string.regexp",
-					"match": "https?:\\/\\/([-a-zA-Z0-9.*]*)\\.\\*(:[0-9]{1,4})?"
+					"match": "[a-zA-Z][-a-zA-Z0-9+.]*:\\/\\/([-a-zA-Z0-9.*]*)\\.\\*(:[0-9]{1,4})?"
 				}
 			]
 		},
@@ -124,7 +124,7 @@
 			"patterns": [
 				{
 					"name": "string.regexp.url-pattern",
-					"match": "https://(?:localhost|(?:www\\.)?[-a-zA-Z0-9@:%._+~#=]{1,32}\\.[a-zA-Z0-9()]{1,6})\\b(?:[-a-zA-Z0-9@:%_+.~#?&//=]{0,100})/[.]{3}",
+					"match": "[a-zA-Z][-a-zA-Z0-9+.]*://(?:\\w+|(?:www\\.)?[-a-zA-Z0-9@:%._+~#=]{1,32}\\.[a-zA-Z0-9()]{1,6})\\b(?:[-a-zA-Z0-9@:%_+.~#?&//=]{0,100})/[.]{3}",
 					"captures": {
 						"1": {
 							"patterns": [
@@ -141,7 +141,31 @@
 			"patterns": [
 				{
 					"name": "string.interpolated.url-expression",
-					"begin": "https://(?:localhost|(?:www\\.)?[-a-zA-Z0-9@:%._+~#=]{1,32}\\.[a-zA-Z0-9()]{1,6})(?=[-a-zA-Z0-9@:%_+.~#?&//=]*\\$)",
+					"begin": "[a-zA-Z][-a-zA-Z0-9+.]*//(?:\\w+|(?:www\\.)?[-a-zA-Z0-9@:%._+~#=]{1,32}\\.[a-zA-Z0-9()]{1,6})(?=[-a-zA-Z0-9@:%_+.~#?&//=]*\\$)",
+					"patterns": [
+						{
+							"match": "\\$[a-zA-Z0-9_-]+\\$",
+							"captures": {
+								"0": {
+									"name": "variable.name"
+								}
+							}
+						},
+						{
+							"match": "[-a-zA-Z0-9@:%_+.~#?&//=]+",
+							"name": "string.unquoted.string-slice"
+						}
+					],
+					"end": "(?=[\\s})\\],:;])"
+				},
+				{
+					"name": "string.interpolated.url-expression",
+					"begin": "(@[a-zA-Z0-9_-]+)(?=/[-a-zA-Z0-9@:%_+.~#?&//=]*\\$)",
+					"beginCaptures": {
+						"1": {
+							"name": "variable.name"
+						}
+					},
 					"patterns": [
 						{
 							"match": "\\$[a-zA-Z0-9_-]+\\$",
@@ -160,7 +184,16 @@
 				},
 				{
 					"name": "string.unquoted.url",
-					"match": "https://(?:localhost|(?:www\\.)?[-a-zA-Z0-9@:%._+~#=]{1,32}\\.[a-zA-Z0-9()]{1,6})\\b(?:[-a-zA-Z0-9@:%_+.~#?&//=]{0,100})"
+					"match": "[a-zA-Z][-a-zA-Z0-9+.]*://(?:\\w+|(?:www\\.)?[-a-zA-Z0-9@:%._+~#=]{1,32}\\.[a-zA-Z0-9()]{1,6})\\b(?:[-a-zA-Z0-9@:%_+.~#?&//=]{0,100})"
+				},
+				{
+					"name": "string.unquoted.url",
+					"match": "(@[a-zA-Z0-9_-]+)/(?:[-a-zA-Z0-9@:%_+.~#?&//=]{0,100})",
+					"captures": {
+						"1": {
+							"name":"variable.name"
+						}
+					}
 				}
 			]
 		},
