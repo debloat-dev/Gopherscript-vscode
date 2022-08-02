@@ -45,6 +45,9 @@
 			"include": "#runes"
 		},
 		{
+			"include": "#option-names"
+		},
+		{
 			"include": "#complex-patterns"
 		},
 		{
@@ -509,6 +512,18 @@
 							"name": "invalid.illegal.unknown-rune"
 						}
 					]
+				}
+			]
+		},
+		"option-names": {
+			"patterns": [
+				{
+					"match": "--[a-zA-Z_-]+\\b",
+					"name": "string.unquoted"
+				},
+				{
+					"match": "-[a-zA-Z_-]\\b",
+					"name": "string.unquoted"
 				}
 			]
 		},
